@@ -1,0 +1,44 @@
+##############################
+## 3200 ######################
+##############################
+record(mbbiDirect,"$(P):3200") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3200 0x0000 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+}
+
+record(mbbiDirect,"$(P):3201") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3200 0x0001 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+#    field(FLNK,"$(P):ChargingStatus")
+}
+
+record(mbbiDirect,"$(P):3202") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3200 0x0001 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+}
+
+#record(calc,"$(P):ChargingStatus") {
+#    field(CALC,"A&0xC")
+#    field(CALC,"A&0b0011")
+#    field(INPA,"$(P):3201 NPP NMS")
+#}
+#record(mbbi,"$(P):test") {
+#    field(INP,"$(P)ChargingStatus")
+#    field(VAL,"0")
+#    field(ZRVL,"0")
+#    field(ZRST,"No Charging")
+#    field(ONVL,"1")
+#    field(ONST,"Float")
+#    field(TWVL,"2")
+#    field(TWST,"Boost")
+#    field(THVL,"3")
+#    field(THST,"Equalizing")
+#}
+
+
+
+##############################
+

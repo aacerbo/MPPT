@@ -1,0 +1,740 @@
+
+file {
+	name="/epics/support/modbus/iocBoot/iocMPPT/all.adl"
+	version=030114
+}
+display {
+	object {
+		x=188
+		y=143
+		width=400
+		height=400
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=9
+		y=10
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3000"
+}
+"text update" {
+	object {
+		x=39
+		y=10
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3000"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=9
+		y=25
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3001"
+}
+"text update" {
+	object {
+		x=39
+		y=25
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3001"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=9
+		y=40
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3002"
+}
+"text update" {
+	object {
+		x=39
+		y=40
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3002"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=9
+		y=55
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3004"
+}
+"text update" {
+	object {
+		x=39
+		y=55
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3004"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=9
+		y=70
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3005"
+}
+"text update" {
+	object {
+		x=39
+		y=70
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3005"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=9
+		y=85
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3006"
+}
+"text update" {
+	object {
+		x=39
+		y=85
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3006"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=9
+		y=100
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3008"
+}
+"text update" {
+	object {
+		x=39
+		y=100
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3008"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=9
+		y=115
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="300E"
+}
+"text update" {
+	object {
+		x=39
+		y=115
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:300E"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=4
+		y=5
+		width=80
+		height=125
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="MPPT:300E"
+	}
+}
+text {
+	object {
+		x=95
+		y=10
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3100"
+}
+"text update" {
+	object {
+		x=125
+		y=10
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3100"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=25
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3101"
+}
+"text update" {
+	object {
+		x=125
+		y=25
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3101"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=40
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3102"
+}
+"text update" {
+	object {
+		x=125
+		y=40
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3102"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=55
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3104"
+}
+"text update" {
+	object {
+		x=125
+		y=55
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3104"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=70
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3105"
+}
+"text update" {
+	object {
+		x=125
+		y=70
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3105"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=85
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3106"
+}
+"text update" {
+	object {
+		x=125
+		y=85
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3106"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=100
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="310C"
+}
+"text update" {
+	object {
+		x=125
+		y=100
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:310C"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=115
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="310D"
+}
+"text update" {
+	object {
+		x=125
+		y=115
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:310D"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=90
+		y=5
+		width=80
+		height=230
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="MPPT:300E"
+	}
+}
+text {
+	object {
+		x=95
+		y=130
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="310E"
+}
+"text update" {
+	object {
+		x=125
+		y=130
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:310E"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=145
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3110"
+}
+"text update" {
+	object {
+		x=125
+		y=145
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3110"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=160
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3111"
+}
+"text update" {
+	object {
+		x=125
+		y=160
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3111"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=175
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3112"
+}
+"text update" {
+	object {
+		x=125
+		y=175
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:3112"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=190
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="311A"
+}
+"text update" {
+	object {
+		x=125
+		y=190
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:311A"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=205
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="311B"
+}
+"text update" {
+	object {
+		x=125
+		y=205
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:311B"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=95
+		y=220
+		width=30
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="311D"
+}
+"text update" {
+	object {
+		x=125
+		y=220
+		width=35
+		height=10
+	}
+	monitor {
+		chan="MPPT:311D"
+		clr=14
+		bclr=0
+	}
+	limits {
+	}
+}

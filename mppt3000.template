@@ -1,0 +1,111 @@
+ ## mbbiDirect record template for register inputs
+record(mbbiDirect,"$(P):3000") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3000 0x0000 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):PV_R_V")
+}
+record(calc,"$(P):PV_R_V") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3000 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+    field(DESC,"Rated PV array voltage")
+}
+
+record(mbbiDirect,"$(P):3001") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3000 0x0001 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):PV_R_C")
+}
+record(calc,"$(P):PV_R_C") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3001 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"A")
+    field(DESC,"Rated PV array current")
+}
+
+record(longin,"$(P):3002") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(MPPT_3000 0x0002)UINT16")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):PV_R_P")
+}
+record(calc,"$(P):PV_R_P") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3002 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"W")
+    field(DESC,"Rated PV array power")
+}
+
+record(mbbiDirect,"$(P):3004") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3000 0x0004 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_R_V")
+}
+record(calc,"$(P):B_R_V") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3004 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+    field(DESC,"Rated battery voltage")
+}
+
+record(mbbiDirect,"$(P):3005") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3000 0x0005 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_R_C")
+}
+record(calc,"$(P):B_R_C") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3005 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"C")
+    field(DESC,"Rated battery current")
+}
+
+record(longin,"$(P):3006") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(MPPT_3000 0x0006)UINT16")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_R_P")
+}
+record(calc,"$(P):B_R_P") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3006 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"W")
+    field(DESC,"Rated battery power")
+}
+
+record(mbbi,"$(P):3008") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3000 0x0008 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(DESC,"Rated charging mode")
+    field(ZRVL,"0")
+    field(ZRST,"Connect/Disconnect")
+    field(ONVL,"1")
+    field(ONST,"PWM")
+    field(TWVL,"2")
+    field(TWST,"MPPT")
+}
+
+record(mbbiDirect,"$(P):300E") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_300E 0x0000 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):L_R_OC")
+}
+record(calc,"$(P):L_R_OC") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):300E NPP NMS")
+    field(PREC,"2")
+    field(EGU,"A")
+    field(DESC,"Rated load output current")
+}

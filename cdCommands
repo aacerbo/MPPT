@@ -1,0 +1,13 @@
+startup = "/epics/support/modbus-2.10.1/iocBoot/iocMPPT"
+putenv("IOC=iocMPPT")
+top = "/epics/support/modbus-2.10.1"
+putenv("TOP=/epics/support/modbus-2.10.1")
+topbin = "/epics/support/modbus-2.10.1/bin/linux-arm"
+support = "/epics/support"
+putenv("SUPPORT=/epics/support")
+asyn = "/epics/support/asyn"
+putenv("ASYN=/epics/support/asyn")
+asynbin = "/epics/support/asyn/bin/linux-arm"
+epics_base = "/epics/base"
+putenv("EPICS_BASE=/epics/base")
+epics_basebin = "/epics/base/bin/linux-arm"

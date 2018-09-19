@@ -1,0 +1,5 @@
+epicsEnvSet("IOC","iocMPPT")
+epicsEnvSet("TOP","/epics/support/modbus-2.10.1")
+epicsEnvSet("SUPPORT","/epics/support")
+epicsEnvSet("ASYN","/epics/support/asyn")
+epicsEnvSet("EPICS_BASE","/epics/base")

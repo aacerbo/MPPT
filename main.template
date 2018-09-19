@@ -1,0 +1,235 @@
+record(mbbiDirect,"$(P):9001") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_btc 0 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+}
+
+
+record(mbbiDirect,"$(P):903D") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_ctm 0 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+}
+
+
+#record(bi,"$(P):0000") {
+#    field(DTYP,"asynUInt32Digital")
+#    field(INP,"@asynMask(MPPT_col 0 0x1)")
+#    field(SCAN,"$(SCAN)")
+#}
+
+#record(bi,"$(P):0001") {
+#    field(DTYP,"asynInt32")
+#    field(INP,"@asynMask(MPPT_col 0 0x1)")
+#    field(SCAN,"$(SCAN)")
+#}
+
+record(bi,"$(P):0002") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_cor 0 0x1)")
+    field(SCAN,"$(SCAN)")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"MAJOR")
+}
+
+#record(bo,"$(P):0002W") {
+#    field(DTYP,"asynUInt32Digital")
+#    field(OUT,"@asynMask(MPPT_cow 0 0x1)")
+#    field(ZNAM,"Low")
+#    field(ONAM,"High")
+#}
+
+#record(bi,"$(P):0003") {
+#    field(DTYP,"asynUInt32Digital")
+#    field(INP,"@asynMask(MPPT_col 2 0x1)")
+#    field(SCAN,"$(SCAN)")
+#}
+
+#record(bi,"$(P):0005") {
+#    field(DTYP,"asynUInt32Digital")
+#    field(INP,"@asynMask(MPPT_col 5 0x1)")
+#    field(SCAN,"$(SCAN)")
+#}
+
+#record(bi,"$(P):0006") {
+#    field(DTYP,"asynUInt32Digital")
+#    field(INP,"@asynMask(MPPT_col 6 0x1)")
+#    field(SCAN,"$(SCAN)")
+#}
+
+
+
+record(bi,"$(P):200C") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_dnm 0 0x1)")
+    field(SCAN,"$(SCAN)")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"MAJOR")
+}
+
+
+
+
+##############################
+
+
+
+record(mbbiDirect,"$(P):3300") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3300 0x0000 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):PV_V_MaxD")
+}
+record(calc,"$(P):PV_V_MaxD") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3300 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+}
+
+record(mbbiDirect,"$(P):3301") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3300 0x0001 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):PV_V_MinD")
+}
+record(calc,"$(P):PV_V_MinD") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3301 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+    field(LOPR,"11")
+    field(HOPR,"15")
+}
+
+record(mbbiDirect,"$(P):3302") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3300 0x0002 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_V_MaxD")
+}
+record(calc,"$(P):B_V_MaxD") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3302 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+    field(LOPR,"11")
+    field(HOPR,"15")
+}
+
+record(mbbiDirect,"$(P):3303") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3300 0x0003 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_V_MinD")
+}
+record(calc,"$(P):B_V_MinD") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3303 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+    field(LOPR,"11")
+    field(HOPR,"15")
+}
+
+
+####
+record(mbbiDirect,"$(P):3304") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3300 0x0004 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+}
+record(mbbiDirect,"$(P):3305") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3300 0x0005 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+}
+record(mbbiDirect,"$(P):330C") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3300 0x000C 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+}
+record(mbbiDirect,"$(P):330D") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3300 0x000D 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+}
+
+
+record(longin,"$(P):3312") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(MPPT_3300 0x0012)UINT16")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):E_G")
+}
+record(calc,"$(P):E_G") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3312 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"KWH")
+}
+
+
+
+
+
+record(mbbiDirect,"$(P):331D") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_331A 0x0003 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_Ts")
+}
+record(calc,"$(P):B_Ts") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):331D NPP NMS")
+    field(PREC,"2")
+    field(EGU,"Celcius")
+}
+
+record(mbbiDirect,"$(P):331E") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_331A 0x0004 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):A_Ts")
+}
+record(calc,"$(P):A_Ts") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):331E NPP NMS")
+    field(PREC,"2")
+    field(EGU,"Celcius")
+}
+
+record(mbbiDirect,"$(P):9013L") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_9013 0x0000 0x00FF)")
+    field(SCAN,"$(SCAN)")
+}
+record(mbbiDirect,"$(P):9013H") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_9013 0x0000 0xFF00)")
+    field(SCAN,"$(SCAN)")
+}
+record(mbbiDirect,"$(P):9014L") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_9013 0x0001 0x00FF)")
+    field(SCAN,"$(SCAN)")
+}
+record(mbbiDirect,"$(P):9014H") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_9013 0x0001 0xFF00)")
+    field(SCAN,"$(SCAN)")
+}
+record(mbbiDirect,"$(P):9015L") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_9013 0x0002 0x00FF)")
+    field(SCAN,"$(SCAN)")
+}
+record(mbbiDirect,"$(P):9015H") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_9013 0x0002 0xFF00)")
+    field(SCAN,"$(SCAN)")
+}

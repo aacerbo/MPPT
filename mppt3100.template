@@ -1,0 +1,212 @@
+record(mbbiDirect,"$(P):3100") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3100 0x0000 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):PV_A_V")
+}
+record(calc,"$(P):PV_A_V") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3100 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+    field(LOPR,"11")
+    field(HOPR,"15")
+}
+
+record(mbbiDirect,"$(P):3101") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3100 0x0001 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):PV_A_C")
+}
+record(calc,"$(P):PV_A_C") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3101 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"A")
+}
+
+record(longin,"$(P):3102") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(MPPT_3100 0x0002)UINT16")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):PV_A_P")
+}
+record(calc,"$(P):PV_A_P") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3102 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"W")
+    field(LOPR,"0")
+    field(HOPR,"80")
+}
+
+record(mbbiDirect,"$(P):3104") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3100 0x0004 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_A_V")
+}
+record(calc,"$(P):B_A_V") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3104 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+    field(DESC,"Bat V")
+    field(LOPR,"11")
+    field(HOPR,"15")    
+}
+
+record(mbbiDirect,"$(P):3105") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_3100 0x0005 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_A_C")
+}
+record(calc,"$(P):B_A_C") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3105 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"C")
+    field(DESC,"Bat C")
+}
+
+record(longin,"$(P):3106") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(MPPT_3100 0x0006)UINT16")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_A_P")
+}
+record(calc,"$(P):B_A_P") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3106 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"W")
+    field(LOPR,"0")
+    field(HOPR,"2")
+}
+
+record(mbbiDirect,"$(P):310C") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_310C 0x0000 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+}
+record(calc,"$(P):L_V") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):310C NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+    field(DESC,"Load Voltage")
+}
+
+record(mbbiDirect,"$(P):310D") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_310C 0x0001 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):L_C")
+}
+record(calc,"$(P):L_C") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):310D NPP NMS")
+    field(PREC,"2")
+    field(EGU,"A")
+    field(DESC,"Load Current")
+}
+
+record(longin,"$(P):310E") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn(MPPT_310C 0x0002)UINT16")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):L_P")
+}
+record(calc,"$(P):L_P") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):310E NPP NMS")
+    field(PREC,"2")
+    field(EGU,"W")
+    field(LOPR,"0")
+    field(HOPR,"2")
+    field(DESC,"Load Power")
+}
+
+record(mbbiDirect,"$(P):3110") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_310C 0x0004 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):B_T")
+}
+record(calc,"$(P):B_T") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3110 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"Celcius")
+    field(LOPR,"6")
+    field(HOPR,"25")
+}
+
+record(mbbiDirect,"$(P):3111") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_310C 0x0005 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):C_T")
+}
+record(calc,"$(P):C_T") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3111 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"Celcius")
+}
+
+record(mbbiDirect,"$(P):3112") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_310C 0x0006 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):E_T")
+}
+record(calc,"$(P):E_T") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):3112 NPP NMS")
+    field(PREC,"2")
+    field(EGU,"Celcius")
+}
+
+record(mbbiDirect,"$(P):311A") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_311A 0x0000 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):SOC")
+}
+record(calc,"$(P):SOC") {
+    field(CALC,"A")
+    field(INPA,"$(P):311A NPP NMS")
+    field(EGU,"Percentage")
+    field(LOPR,"0")
+    field(HOPR,"100")
+}
+
+record(mbbiDirect,"$(P):311B") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_311A 0x0001 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):R_T")
+}
+record(calc,"$(P):R_T") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):311B NPP NMS")
+    field(PREC,"2")
+    field(EGU,"Celcius")
+}
+
+record(mbbiDirect,"$(P):311D") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(MPPT_311D 0x0000 0xFFFF)")
+    field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):R_BP")
+}
+record(calc,"$(P):R_BP") {
+    field(CALC,"A/100")
+    field(INPA,"$(P):311D NPP NMS")
+    field(PREC,"2")
+    field(EGU,"V")
+    field(DESC,"Rated real battery voltage")
+}

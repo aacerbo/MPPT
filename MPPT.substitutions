@@ -1,0 +1,90 @@
+file "mbbiDirect.template" { pattern
+{P,      R,          PORT,         OFFSET,   MASK,   SCAN}
+{MPPT:,  3000,       MPPT_abr,     0,        0xFFFF, "I/O Intr"}
+{MPPT:,  3001,       MPPT_abr,     1,        0xFFFF, "I/O Intr"}
+{MPPT:,  3002,       MPPT_abr,     2,        0xFFFF, "I/O Intr"}
+{MPPT:,  3003,       MPPT_abr,     3,        0xFFFF, "I/O Intr"}
+{MPPT:,  3004,       MPPT_abr,     4,        0xFFFF, "I/O Intr"}
+{MPPT:,  3005,       MPPT_abr,     5,        0xFFFF, "I/O Intr"}
+{MPPT:,  3006,       MPPT_abr,     6,        0xFFFF, "I/O Intr"}
+{MPPT:,  3007,       MPPT_abr,     7,        0xFFFF, "I/O Intr"}
+{MPPT:,  3008,       MPPT_abr,     8,        0xFFFF, "I/O Intr"}
+
+{MPPT:,  300E,       MPPT_rcl,     0,        0xFFFF, "I/O Intr"}
+
+{MPPT:,  3100,       MPPT_che,     0,        0xFFFF, "I/O Intr"}
+{MPPT:,  3101,       MPPT_che,     1,        0xFFFF, "I/O Intr"}
+{MPPT:,  3102,       MPPT_che,     2,        0xFFFF, "I/O Intr"}
+{MPPT:,  3103,       MPPT_che,     3,        0xFFFF, "I/O Intr"}
+{MPPT:,  3104,       MPPT_che,     4,        0xFFFF, "I/O Intr"}
+{MPPT:,  3105,       MPPT_che,     5,        0xFFFF, "I/O Intr"}
+{MPPT:,  3106,       MPPT_che,     6,        0xFFFF, "I/O Intr"}
+{MPPT:,  3107,       MPPT_che,     7,        0xFFFF, "I/O Intr"}
+
+{MPPT:,  310C,       MPPT_lbi,     0,        0xFFFF, "I/O Intr"}
+{MPPT:,  310D,       MPPT_lbi,     1,        0xFFFF, "I/O Intr"}
+{MPPT:,  310E,       MPPT_lbi,     2,        0xFFFF, "I/O Intr"}
+{MPPT:,  310F,       MPPT_lbi,     3,        0xFFFF, "I/O Intr"}
+{MPPT:,  3110,       MPPT_lbi,     4,        0xFFFF, "I/O Intr"}
+{MPPT:,  3111,       MPPT_lbi,     5,        0xFFFF, "I/O Intr"}
+{MPPT:,  3112,       MPPT_lbi,     6,        0xFFFF, "I/O Intr"}
+
+{MPPT:,  311A,       MPPT_bl1,     0,        0xFFFF, "I/O Intr"}
+{MPPT:,  311B,       MPPT_bl1,     1,        0xFFFF, "I/O Intr"}
+{MPPT:,  311D,       MPPT_bl2,     0,        0xFFFF, "I/O Intr"}
+
+{MPPT:,  3200_0:3,   MPPT_bcs,     0,        0x000F, "I/O Intr"} #D0-3
+{MPPT:,  3200_4:7,   MPPT_bcs,     0,        0x00F0, "I/O Intr"} #D4-7
+{MPPT:,  3200_8,     MPPT_bcs,     0,        0x0100, "I/O Intr"} #D8
+{MPPT:,  3200_15,    MPPT_bcs,     0,        0x8000, "I/O Intr"} #D15
+
+{MPPT:   3201_0,     MPPT_bcs,     1,        0x0001, "I/O Intr"} #D0
+{MPPT:,  3201_1,     MPPT_bcs,     1,        0x0002, "I/O Intr"} #D1
+{MPPT:,  3201_2:3,   MPPT_bcs,     1,        0x000C, "I/O Intr"} #D2-3
+{MPPT:,  3201_4,     MPPT_bcs,     1,        0x0010, "I/O Intr"} #D4
+{MPPT:,  3201_7,     MPPT_bcs,     1,        0x0080, "I/O Intr"} #D7
+{MPPT:,  3201_8,     MPPT_bcs,     1,        0x0100, "I/O Intr"} #D8
+{MPPT:,  3201_9,     MPPT_bcs,     1,        0x0200, "I/O Intr"} #D9
+{MPPT:,  3201_10,    MPPT_bcs,     1,        0x0400, "I/O Intr"} #D10
+{MPPT:,  3201_11,    MPPT_bcs,     1,        0x0800, "I/O Intr"} #D11
+{MPPT:,  3201_12,    MPPT_bcs,     1,        0x1000, "I/O Intr"} #D12
+{MPPT:,  3201_13,    MPPT_bcs,     1,        0x2000, "I/O Intr"} #D13
+{MPPT:,  3201_14:15, MPPT_bcs,     1,        0xC000, "I/O Intr"} #D14-15
+
+{MPPT:,  3202_0,     MPPT_bcs,     2,        0x0001, "I/O Intr"} #D0
+{MPPT:,  3202_1,     MPPT_bcs,     2,        0x0002, "I/O Intr"} #D1
+{MPPT:,  3202_4,     MPPT_bcs,     2,        0x0010, "I/O Intr"} #D4
+{MPPT:,  3202_5,     MPPT_bcs,     2,        0x0020, "I/O Intr"} #D5
+{MPPT:,  3202_6,     MPPT_bcs,     2,        0x0040, "I/O Intr"} #D6
+{MPPT:,  3202_7,     MPPT_bcs,     2,        0x0080, "I/O Intr"} #D7
+{MPPT:,  3202_8,     MPPT_bcs,     2,        0x0100, "I/O Intr"} #D8
+{MPPT:,  3202_9,     MPPT_bcs,     2,        0x0200, "I/O Intr"} #D9
+{MPPT:,  3202_10,    MPPT_bcs,     2,        0x0400, "I/O Intr"} #D10
+{MPPT:,  3202_11,    MPPT_bcs,     2,        0x0800, "I/O Intr"} #D11
+{MPPT:,  3202_12:13, MPPT_bcs,     2,        0x3000, "I/O Intr"} #D12-13
+{MPPT:,  3202_14:15, MPPT_bcs,     2,        0xC000, "I/O Intr"} #D14-15
+
+#3300 : 3315
+
+{MPPT:,  331A,       MPPT_bse,     0,        0xFFFF, "I/O Intr"}
+{MPPT:,  331B,       MPPT_bse,     1,        0xFFFF, "I/O Intr"}
+{MPPT:,  331C,       MPPT_bse,     2,        0xFFFF, "I/O Intr"}
+{MPPT:,  331D,       MPPT_bse,     3,        0xFFFF, "I/O Intr"}
+{MPPT:,  331E,       MPPT_bse,     4,        0xFFFF, "I/O Intr"}
+
+#9000 : 900E
+
+{MPPT:,  9013_0:7,   MPPT_clk,     0,        0x00FF, "I/O Intr"} #D0-7
+{MPPT:,  9013_8:15,  MPPT_clk,     0,        0xFF00, "I/O Intr"} #D8-15
+{MPPT:,  9014_0:7,   MPPT_clk,     1,        0x00FF, "I/O Intr"} #D0-7
+{MPPT:,  9014_8:15,  MPPT_clk,     1,        0xFF00, "I/O Intr"} #D8-15
+{MPPT:,  9015_0:7,   MPPT_clk,     2,        0x00FF, "I/O Intr"} #D0-7
+{MPPT:,  9015_8:15,  MPPT_clk,     2,        0xFF00, "I/O Intr"} #D8-15
+
+#9016 : 9021
+#903D : 903F
+#9042 : 904D
+#9063
+#9065 : 9067
+#906A : 9070
+}

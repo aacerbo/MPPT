@@ -1,0 +1,26 @@
+file "main.template" { pattern
+{P,    PORT,     MASK,   SCAN}
+{MPPT, MPPT_che, 0xFFFF, "I/O Intr"}
+}
+
+file "mppt3000.template" { pattern
+{P,    MASK,   SCAN}
+{MPPT, 0xFFFF, "I/O Intr"}
+}
+
+file "mppt3100.template" { pattern
+{P,    MASK,   SCAN}
+{MPPT, 0xFFFF, "I/O Intr"}
+}
+
+file "mppt3200.template" { pattern
+{P,    MASK,   SCAN}
+{MPPT, 0xFFFF, "I/O Intr"}
+}
+
+
+
+file "../../db/poll_delay.template" { pattern
+{P,      R,         PORT}
+{MPPT:,  PollDelay, MPPT_9013}
+}
